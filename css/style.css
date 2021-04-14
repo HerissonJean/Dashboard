@@ -1,0 +1,188 @@
+header{
+    display: flex;     /* linha */
+    justify-content: space-between;     /* separa */
+    align-items: center; /* separa */
+    padding: 2.5em 0;
+}
+header .title-box .title{
+    color: var(--ColorDark);
+}
+header .title-box p{
+    color: var(--ColorDarkLight);
+    font-weight: 700;
+}
+
+header .toggle-mode{
+    display: flex;
+    align-items: center;
+    color: var(--ColorDarkLight);
+    font-weight: 700;
+    font-size: 16px;
+}
+header .toggle-mode input[type=checkbox]{
+    -webkit-appearance: none;
+    width: 90px;
+    height: 40px;
+    border-radius: 100px;
+    background: var(--ToggleBtnDark);
+    outline: 0;
+    position: relative;
+    cursor: pointer;
+    border-radius: 100px;
+    margin-left: 20px;
+}
+
+header .toggle-mode input[type=checkbox]{
+    -webkit-appearance: none;
+    width: 90px;
+    height: 40px;
+    border-radius: 100px;
+    background: var(--ToggleBtnDark);
+    outline: 0;
+    position: relative;
+    cursor: pointer;
+    border-radius: 100px;
+    margin-left: 20px;
+}
+header .toggle-mode input[type=checkbox]::before{
+    position: absolute;
+    content: "";
+    border-radius: 50px;
+    transform: translateX(50px) scale(0.9);
+    height: 40px;
+    transition: transform 0.2s;
+    background: var(--BgLight);
+    width: 40px;
+}
+header .toggle-mode input[type=checkbox]:checked::before{
+    transform: translateX(0) scale(0.9);
+}
+main .followers,
+main .grid-overview{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 30px;
+}
+.card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: transform 0.5s ease-out;
+    background:var(--BgLightCard);
+    position: relative; 
+}
+.card:hover{
+    transform: scale(1.05);
+    background: var(--BgLightCardHover);
+}
+.card::before{
+    content: "";
+    position: absolute;
+    height: 5px;
+    border-radius: 8px 8px 0 0;
+    left: 0;
+    right: 0;
+    top: 0;
+
+}
+.card.facebook::before{
+    background: var(--Facebook);
+}
+.card.twitter::before{
+    background: var(--Twitter);
+}
+.card.instagram::before{
+    background: var(--Instagram);
+}
+.card.youtube::before{
+    background: var(--Youtube);
+}
+
+.card .username{
+    display: flex;
+    justify-content:center;
+    color: var(--ColorDarkLight);
+} 
+.card .username img{
+    margin-right: 10px;
+}
+.card .count-follow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 25px 0;
+    font-size: 1.1em;
+    font-weight: 400;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--ColorDarkLight);
+}
+.card .count-follow span{
+    font-size: 3em;
+    font-weight: 900;
+    letter-spacing: 0;
+    color: var(--ColorDark);
+}
+
+.card span.down{
+    color: var(--BrightRed);
+}
+.card span{
+    display: flex;
+    align-items: center ;
+    color: var(--LimeGreen);
+    font-weight: 700;
+}
+.card span img{
+    margin-right: 5px;
+}
+main .overview{
+    margin-top: 25px;
+}
+main .overview h2{  
+    font-size: 1.7em;
+    color: var(--ColorDark);
+}
+
+.grid-overview{
+    margin: 20px 0;
+}
+.grid-overview .card .title-card{
+    margin-bottom: 20px;
+}
+.card .title-card span{
+    font-size: 1.1em;
+    color: var(--ColorDarkLight);
+}
+
+.grid-overview .card .title-card,
+.grid-overview .card .text-card{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+}
+
+.grid-overview .card .text-card{
+    align-items: baseline;
+}
+.grid-overview .card .text-card p{
+    font-size:  2.8em;
+    font-weight: 700;
+    color: var(--ColorDark);
+}
+
+.text-center .emailAddress{
+    padding: 10px;
+}
+
+.checkboxRem{
+    align-items: center;
+}
+.fieldButton {
+    margin-left: 10px;
+}
+
